@@ -1,0 +1,26 @@
+<main class="container mt-5">
+  <h1 class="mb-4">Edit Lemon-Themed Post</h1>
+  <form class="update-lemon-post-form" class="mb-3">
+    <div class="mb-3">
+      <label for="title-update-lemon-post" class="form-label">Lemon-Themed Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title-update-lemon-post"
+        placeholder="Enter lemon-themed post title"
+        value="{{title}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="content-update-lemon-post" class="form-label">Lemon-Themed Content</label>
+      <textarea
+        class="form-control"
+        id="content-update-lemon-post"
+        rows="3"
+        placeholder="Enter lemon-themed post content"
+      >{{content}}</textarea>
+    </div>
+    <button type="submit" id="update-lemon-post" class="btn btn-primary">Update Lemon-Themed Post</button>
+    <button type="button" id="delete-lemon-post" class="btn btn-danger">Delete Lemon-Themed Post</button>
+  </form>
+</main>
