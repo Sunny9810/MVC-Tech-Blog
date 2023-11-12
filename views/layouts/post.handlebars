@@ -1,28 +1,30 @@
-<div class="container mt-5" style="background-color: #FFF4E3; padding: 20px;">
-  <h2 class="mb-4" style="color: #FFD700; text-align: center; font-size: 28px;">Create a Lemon Blog Contribution</h2>
-  <form class="new-chess-post-form">
-    <div class="mb-3">
-      <label for="title-new-chess-post" class="form-label" style="color: #FFD700;">Title:</label>
-      <input
-        type="text"
-        class="form-control"
-        id="title-new-chess-post"
-        placeholder="Enter a lemony title"
-        style="background-color: #FFFFCC; border: 1px solid #FFD700; color: #000;"
-      />
+<main class="container mt-5" style="background-color: #FFF4E3; padding: 20px;">
+  <article>
+    <h1 style="color: #FFD700;">{{title}}</h1>
+    <p style="color: #FFD700;">Created by: {{user.username}} | Date: {{format_date createdAt}}</p>
+    <p>{{content}}</p>
+  </article>
+  {{#if logged_in}}
+    <form class="new-chess-comment-form mb-3">
+      <div class="mb-3">
+        <label for="comment" class="form-label" style="color: #FFD700;">Add a Lemon Comment:</label>
+        <textarea
+          class="form-control"
+          id="content-new-chess-comment"
+          rows="3"
+          placeholder="Share your lemony thoughts..."
+          style="background-color: #FFFFCC; border: 1px solid #FFD700; color: #000;"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning" style="background-color: #FFD700; color: #008000;">Submit</button>
+    </form>
+  {{/if}}
+  <h2 style="color: #FFD700;">Lemon Comment History:</h2>
+  {{#each comments}}
+    <div class="comment mb-3" style="background-color: #FFFFCC; padding: 10px; border: 1px solid #FFD700;">
+      <p>{{comment_text}}</p>
+      <p style="color: #FFD700;">By {{user.username}} on {{format_date createdAt}}</p>
     </div>
-    <div class="mb-3">
-      <label for="content-new-chess-post" class="form-label" style="color: #FFD700;">Content:</label>
-      <textarea
-        class="form-control"
-        id="content-new-chess-post"
-        rows="5"
-        placeholder="Share your lemony thoughts here"
-        style="background-color: #FFFFCC; border: 1px solid #FFD700; color: #000;"
-      ></textarea>
-    </div>
-    <div class="mb-3 text-center">
-      <button type="submit" class="btn btn-warning" style="background-color: #FFD700; color: #008000; font-weight: bold; padding: 10px 20px; font-size: 18px;">Create Lemon Post</button>
-    </div>
-  </form>
-</div>
+  {{/each}}
+</main>
+
