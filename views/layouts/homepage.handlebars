@@ -1,0 +1,19 @@
+<main class="container mt-5" style="background-color: #FFF4E3;">
+  <h1 class="mb-4" style="color: #FFD700;">Lemon Chess Blog Posts</h1>
+  <div class="row">
+    {{#each posts}}
+      <div class="col-md-4">
+        <div class="card mb-3" style="border: 1px solid #FFD700;">
+          <div class="card-header" style="background-color: #FFD700;">
+            <h2 class="card-title">
+              <a href="/post/{{id}}" class="text-dark" style="color: #008000;">{{title}}</a>
+            </h2>
+          </div>
+          <div class="card-body text-dark">
+            <p style="color: #000;">Created by: {{user.username}} Date: {{format_date createdAt}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</main>
