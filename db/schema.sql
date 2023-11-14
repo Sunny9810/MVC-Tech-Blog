@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS Arevik_TechBlog;
-CREATE DATABASE Arevik_TechBlog;
+DROP DATABASE IF EXISTS Arevik_TechBlog_db;
+CREATE DATABASE Arevik_TechBlog_db;
