@@ -86,5 +86,5 @@ Make all the functons work properly.
 ![](./public/images/Screenshot%202023-11-18%20002740.png)
 
 ## Deployed Link:
-![](https://lemonblog-5d5dc120b0be.herokuapp.com/)
+https://lemonblog-5d5dc120b0be.herokuapp.com
 
